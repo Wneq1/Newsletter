@@ -4,28 +4,27 @@ Projekt ten to kompleksowy system automatyzacji newslettera, który agreguje naj
 
 ## 🚀 Funkcjonalności
 
-- **Wiadomości ze Świata**: BBC, Al Jazeera, NYT (Top 3)
-- **Wiadomości z Polski**: Polskie Radio, TVN24, Onet (Top 3)
-- **Technologie**: TechCrunch, The Verge, Wired (Top 3)
-- **Nauka**: Artykuły z arXiv oraz IEEE Xplore filtrowane pod kątem metrologii i elektroniki.
-- **Finanse**: Aktualne ceny złota i srebra (PLN) wraz z historią zmian (dzienną i miesięczną).
+- **Wiadomości ze Świata**: BBC (Top Stories & World)
+- **Wiadomości z Polski**: Gazeta Wyborcza (Kraj)
+- **Wiadomości Ekonomiczne**: Bankier.pl (Najważniejsze informacje)
+- **Finanse**: Stooq.pl (Złoto, Srebro, Kursy Walut)
 - **Email HTML**: Responsywny i estetyczny szablon emaila.
 
 ## 📂 Struktura Projektu
 
 ```text
 Newsletter/
-├── src/                        # Kod źródłowy
+├── newsletter_app.py           # Skonsolidowana wersja programu (wszystko w jednym pliku)
+├── src/                        # Kod źródłowy (wersja modułowa)
 │   ├── main.py                 # Główny punkt wejścia
 │   ├── config.py               # Konfiguracja i zmienne środowiskowe
 │   ├── email_sender.py         # Obsługa wysyłania emaili
 │   ├── html_template.py        # Generator HTML
 │   └── scrapers/               # Moduły pobierające dane
-│       ├── world_news.py       # Wiadomości ze świata
-│       ├── polish_news.py      # Wiadomości z Polski
-│       ├── tech_news.py        # Technologie
-│       ├── scientific_news.py  # Nauka
-│       └── financial_news.py   # Finanse (Złoto/Srebro)
+│       ├── world_news.py       # Wiadomości ze świata (BBC)
+│       ├── polish_news.py      # Wiadomości z Polski (Gazeta Wyborcza)
+│       ├── bankier_news.py     # Wiadomości ekonomiczne (Bankier.pl)
+│       └── financial_news.py   # Dane finansowe (Stooq)
 ├── .env                        # Plik konfiguracyjny (nie udostępniany w repozytorium)
 ├── .gitignore                  # Pliki ignorowane przez Git
 ├── requirements.txt            # Zależności Python
