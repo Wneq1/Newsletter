@@ -1,6 +1,6 @@
 # System Automatycznego Newslettera
 
-Projekt ten to zautomatyzowany system newslettera, który zbiera wiadomości z różnych źródeł (wiadomości ze świata, z Polski, technologie, nauka oraz finanse), formatuje je w atrakcyjny email HTML i wysyła codziennie rano.
+Projekt ten to kompleksowy system automatyzacji newslettera, który agreguje najważniejsze informacje z kategorii: Świat, Polska, Technologie, Nauka oraz Finanse. Aplikacja generuje estetyczne raporty HTML i dystrybuuje je pocztą elektroniczną każdego ranka.
 
 ## 🚀 Funkcjonalności
 
@@ -13,6 +13,7 @@ Projekt ten to zautomatyzowany system newslettera, który zbiera wiadomości z r
 
 ## 📂 Struktura Projektu
 
+```text
 Newsletter/
 ├── src/                        # Kod źródłowy
 │   ├── main.py                 # Główny punkt wejścia
