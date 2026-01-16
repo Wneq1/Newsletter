@@ -33,7 +33,10 @@ class Config:
     
     # Konfiguracja Email
     SMTP_SERVER: str = os.getenv('SMTP_SERVER', 'poczta.o2.pl')
-    SMTP_PORT: int = int(os.getenv('SMTP_PORT', '465'))
+    
+    _port_str = os.getenv('SMTP_PORT')
+    SMTP_PORT: int = int(_port_str) if _port_str else 465
+    
     EMAIL_SENDER: str = os.getenv('EMAIL_SENDER', '')
     EMAIL_PASSWORD: str = os.getenv('EMAIL_PASSWORD', '')
     EMAIL_RECIPIENT: str = os.getenv('EMAIL_RECIPIENT', '')
