@@ -13,7 +13,6 @@ Projekt ten to zautomatyzowany system newslettera, który zbiera wiadomości z r
 
 ## 📂 Struktura Projektu
 
-```
 Newsletter/
 ├── src/                        # Kod źródłowy
 │   ├── main.py                 # Główny punkt wejścia
@@ -29,8 +28,6 @@ Newsletter/
 ├── .env                        # Plik konfiguracyjny (nie udostępniany w repozytorium)
 ├── .gitignore                  # Pliki ignorowane przez Git
 ├── requirements.txt            # Zależności Python
-├── Dockerfile                  # Konfiguracja obrazu Docker
-├── docker-compose.yml          # Konfiguracja Docker Compose
 └── README.md                   # Dokumentacja projektu
 ```
 
@@ -80,6 +77,3 @@ Aby ręcznie uruchomić generowanie i wysyłkę newslettera:
 python src/main.py
 ```
 
-## 📝 Autor
-
-Projekt stworzony przy użyciu asysty AI.
