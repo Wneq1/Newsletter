@@ -32,7 +32,8 @@ class Config:
     """Klasa konfiguracyjna dla systemu newslettera."""
     
     # Konfiguracja Email
-    SMTP_SERVER: str = os.getenv('SMTP_SERVER', 'poczta.o2.pl')
+    _server_str = os.getenv('SMTP_SERVER')
+    SMTP_SERVER: str = _server_str if _server_str else 'poczta.o2.pl'
     
     _port_str = os.getenv('SMTP_PORT')
     SMTP_PORT: int = int(_port_str) if _port_str else 465
