@@ -2,8 +2,8 @@ name: Codzienny Newsletter
 
 on:
   schedule:
-    # Uruchom codziennie o 10:00 rano czasu polskiego (9:00 UTC)
-    - cron: '0 9 * * *'
+    # Uruchom codziennie o 11:00 rano czasu polskiego (10:00 UTC)
+    - cron: '0 10 * * *'
   workflow_dispatch: # Pozwala na ręczne uruchomienie z zakładki Actions
 
 jobs:
