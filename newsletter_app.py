@@ -129,6 +129,11 @@ def send_email(subject: str, html_content: str, recipient: Optional[str] = None)
         html_part = MIMEText(html_content, 'html', 'utf-8')
         message.attach(html_part)
         
+        # Dodatkowe nagłówki dla lepszej dostarczalności (anty-spam)
+        from email.utils import formatdate, make_msgid
+        message['Date'] = formatdate(localtime=True)
+        message['Message-ID'] = make_msgid()
+        
         print(f"[EMAIL] Łączenie z {config.SMTP_SERVER}:{config.SMTP_PORT}...")
         
         context = ssl.create_default_context()
